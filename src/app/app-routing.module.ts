@@ -4,6 +4,9 @@ import {BasicsComponent} from './basics/basics.component';
 import {HomeComponent} from './home/home.component';
 import {XssComponent} from './xss/xss.component';
 import {CsrfComponent} from './csrf/csrf.component';
+import {ComponentDirectivesComponent} from './directives/component-directives/component-directives.component';
+import {StructuralDirectivesComponent} from './directives/structural-directives/structural-directives.component';
+import {AttributeDirectivesComponent} from './directives/attribute-directives/attribute-directives.component';
 
 
 const routes: Routes = [

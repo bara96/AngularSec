@@ -1,0 +1,22 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+    <h2 *ngFor="let value of names">Hello {{value}}</h2>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 100px;">
+    <div class="col-md-4">
+      <button (click)="changeActive()" class="form-control">Change</button>
+    </div>
+    <div class="col-md-8">
+      <div *ngIf="active then activeDiv else inactiveDiv"></div>
+      <ng-template #activeDiv>
+        <h2>I'm active !</h2>
+      </ng-template>
+      <ng-template #inactiveDiv>
+        <h2>I'm not active !</h2>
+      </ng-template>
+    </div>
+  </div>
+</div>
