@@ -11,6 +11,7 @@ import { StructuralDirectivesComponent } from './directives/structural-directive
 import { AttributeDirectivesComponent } from './directives/attribute-directives/attribute-directives.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HighlightDirective } from './directives/attribute-directives/highlight.directive';
+import {HttpClientModule, HttpClientXsrfModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,13 @@ import { HighlightDirective } from './directives/attribute-directives/highlight.
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+
+    //CSRF/XSRF Protection
+    HttpClientModule,
+    HttpClientXsrfModule.withOptions({
+      cookieName: 'XSRF-TOKEN',
+      headerName: 'X-XSRF-TOKEN',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

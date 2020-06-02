@@ -1,1 +1,24 @@
-<p>xss works!</p>
+<div class="content">
+  <div style="margin-bottom: 50px;">
+    <h3>HTML binding example:</h3>
+    <p [innerHTML]="htmlSnippet"></p>
+  </div>
+
+  <h3>XSS exploit example:</h3>
+  <div class="row">
+    <div class="col-md-8" [formGroup]="form">
+      <label>
+        <input type="text" class="form-control" formControlName="text" placeholder="Insert text">
+      </label>
+    </div>
+    <div class="col-md-4">
+      <button (click)="changeText()" class="form-control">Change</button>
+    </div>
+    <div class="col-md-12">
+      <h3> Text parsed: {{ printText() }}</h3>
+    </div>
+    <div class="col-md-12">
+      <h3> {{ printEvalText() }}</h3>
+    </div>
+  </div>
+</div>
