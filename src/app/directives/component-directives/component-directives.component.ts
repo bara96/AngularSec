@@ -9,7 +9,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class ComponentDirectivesComponent implements OnInit {
 
   form: FormGroup;
-  title: string = "Angular Security"
+  title: string = "Angular Security"  //the title printed
 
   constructor(formBuilder: FormBuilder) {
     this.form = formBuilder.group({
@@ -20,8 +20,9 @@ export class ComponentDirectivesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  printHelloText() {
-    return "Hello " + this.form.get('firstName').value + "!";
+  printHelloText() {    //the user firstname printed
+    let name =  this.form.get('firstName').value; //take the form value
+    return "Hello " + name + "!";
   }
 
 }

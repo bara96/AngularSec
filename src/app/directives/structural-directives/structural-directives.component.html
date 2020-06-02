@@ -1,5 +1,13 @@
 <div class="content">
   <div class="row">
+    <div class="col-md-8" [formGroup]="form">
+      <label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Insert a new name">
+      </label>
+    </div>
+    <div class="col-md-4">
+      <button (click)="addName()" class="form-control">Add Name</button>
+    </div>
     <div class="col-md-12">
     <h2 *ngFor="let value of names">Hello {{value}}</h2>
     </div>

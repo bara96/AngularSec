@@ -23,10 +23,10 @@ export class XssComponent implements OnInit {
   }
 
   changeText() {
-    this.text = this.form.get('text').value;
+    this.text = this.form.get('text').value; //set variable text to the form value
   }
 
-  printText(): string {
+  printText(): string {   //print the user text
     if(this.text.length > 0) {
       return this.text;
     }
@@ -34,7 +34,7 @@ export class XssComponent implements OnInit {
       return null;
   }
 
-  printEvalText() {
+  printEvalText() {   //print user text with eval()
     if(this.text.length > 0) {
       let text = eval(this.text);
       this.text = '';
@@ -43,9 +43,4 @@ export class XssComponent implements OnInit {
     else
       return null;
   }
-}
-
-export class InnerHtmlBindingComponent {
-  // For example, a user/attacker-controlled value from a URL.
-
 }
