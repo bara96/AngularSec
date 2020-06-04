@@ -1,15 +1,11 @@
 <div class="content">
   <h1>Welcome to {{ title }}</h1>
 
-  <div class="row">
-    <div class="col-md-4" [formGroup]="form">
+  <div class="row" [formGroup]="form">
       <label>
         <input type="text" class="form-control" formControlName="firstName" placeholder="Insert your name!">
       </label>
-    </div>
-    <div class="col-md-8">
       <h3>{{ printHelloText() }}</h3>
-    </div>
   </div>
 </div>
 
