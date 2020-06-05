@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## AngularSec Test
+On the root folder
+1) install `node_modules` folder with a `yarn install` command (npm required)
+2) start angular with `yarn start`
+
+On `/Server/angular-node-express-api` folder
+1) install `node_modules` folder with a `npm install` command
+2) start server executing `app.js` script
+
+**Note:** Server is required in order to use some features of the app
