@@ -12,6 +12,7 @@ import { AttributeDirectivesComponent } from './directives/attribute-directives/
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HighlightDirective } from './directives/attribute-directives/highlight.directive';
 import {HttpClientModule, HttpClientXsrfModule} from '@angular/common/http';
+import { CspComponent } from './csp/csp.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {HttpClientModule, HttpClientXsrfModule} from '@angular/common/http';
     ComponentDirectivesComponent,
     StructuralDirectivesComponent,
     AttributeDirectivesComponent,
-    HighlightDirective
+    HighlightDirective,
+    CspComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,7 @@ import {HttpClientModule, HttpClientXsrfModule} from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
 
-    //CSRF/XSRF Protection
+    //CSRF-XSRF Protection
     HttpClientModule,
     HttpClientXsrfModule.withOptions({
       cookieName: 'XSRF-TOKEN',

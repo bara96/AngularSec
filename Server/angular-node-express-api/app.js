@@ -16,6 +16,11 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 // We need this because "cookie" is true in csrfProtection
 app.use(cookieParser());
 
+app.get('/script/wildcard', function(req, res) {  //test csp with Wildcard
+  res.type('.js');
+  res.send('alert("don\'t user Wildcard!");\n');
+});
+
 app.get('/api', csrfProtection, function(req, res) {
   // Pass the Csrf Token
   res.cookie('XSRF-TOKEN', req.csrfToken(), { httpOnly: false });

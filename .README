@@ -1,0 +1,9 @@
+On the root fodler
+1) install node_modules doing a yarn install (npm required)
+2) start angular with yarn start
+
+On /Server folder
+1) install node_modules doing a npm install
+2) start server executing app.js script
+
+Server is required in order to use some features of the app

@@ -4,9 +4,7 @@ import {BasicsComponent} from './basics/basics.component';
 import {HomeComponent} from './home/home.component';
 import {XssComponent} from './xss/xss.component';
 import {CsrfComponent} from './csrf/csrf.component';
-import {ComponentDirectivesComponent} from './directives/component-directives/component-directives.component';
-import {StructuralDirectivesComponent} from './directives/structural-directives/structural-directives.component';
-import {AttributeDirectivesComponent} from './directives/attribute-directives/attribute-directives.component';
+import {CspComponent} from './csp/csp.component';
 
 
 const routes: Routes = [
@@ -15,6 +13,7 @@ const routes: Routes = [
   { path: 'basics', component: BasicsComponent},
   { path: 'xss', component: XssComponent},
   { path: 'csrf', component: CsrfComponent},
+  { path: 'csp', component: CspComponent},
 ];
 
 @NgModule({
