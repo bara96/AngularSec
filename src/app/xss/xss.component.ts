@@ -11,6 +11,7 @@ export class XssComponent implements OnInit {
   htmlSnippet = 'Template <script>alert("0wned")</script> <b>Syntax</b>';
 
   text: string = '';
+  evalText: string = '';
   form: FormGroup;
 
   constructor(formBuilder: FormBuilder) {
@@ -22,25 +23,16 @@ export class XssComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeText() {
+  setText() {
     this.text = this.form.get('text').value; //set variable text to the form value
   }
 
-  printText(): string {   //print the user text
-    if(this.text.length > 0) {
-      return this.text;
+  setEvalText() {
+    let text = this.form.get('text').value; //set variable text to the form value
+    if(text != null && text.length > 0) {
+      this.evalText = eval(text);
     }
     else
-      return null;
-  }
-
-  printEvalText() {   //print user text with eval()
-    if(this.text.length > 0) {
-      let text = eval(this.text);
-      this.text = '';
-      return text;
-    }
-    else
-      return null;
+      this.evalText = '';
   }
 }

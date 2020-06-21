@@ -1,13 +1,16 @@
-<div class="content">
-  <div class="row" style="text-align: center;">
-    <div class="col-12">
-      <button (click)="home()" class="form-control">Get Headers</button>
-    </div>
-    <div class="col-12">
-      <button (click)="login()" class="form-control">Login</button>
-    </div>
-    <div class="col-12">
-      <button (click)="users()" class="form-control">Users</button>
-    </div>
-  </div>
+<div class="content button-centered">
+    <ol class="custom-list">
+      <li>
+        <button (click)="home()" class="form-control">Get Headers</button>
+        <span>Set <b>XSRF-TOKEN</b></span>
+      </li>
+      <li>
+        <button (click)="login()" class="form-control">Login</button>
+        <span>Login and Set <b>AccessToken</b>, XSRF-TOKEN is required</span>
+      </li>
+      <li>
+        <button (click)="users()" class="form-control">Users</button>
+        <span>Access to private area, all tokens are required:</span>
+      </li>
+    </ol>
 </div>

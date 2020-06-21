@@ -5,12 +5,16 @@
   </div>
 
   <h3>XSS exploit example:</h3>
-  <div class="row" [formGroup]="form">
-      <label>
-        <input type="text" class="form-control" formControlName="text" placeholder="Insert text">
-      </label>
-      <button (click)="changeText()" class="form-control">Change</button>
-      <h3> Text parsed: {{ printText() }}</h3>
-      <h3> {{ printEvalText() }}</h3>
+  <div [formGroup]="form">
+    <label>
+      <input type="text" class="form-control" formControlName="text" placeholder="Insert text">
+    </label>
+    <br>
+    <!-- Standard binding -->
+    <button (click)="setText()" class="form-control">Apply Standard</button>
+    <h3> {{ text }}</h3> <br>
+    <!-- Exploit using eval -->
+    <button (click)="setEvalText()" class="form-control">Apply Eval</button>
+    <h3> {{ evalText }}</h3>
   </div>
 </div>

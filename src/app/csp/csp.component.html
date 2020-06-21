@@ -1,21 +1,21 @@
 <div class="content">
   <div style="margin-bottom: 50px;">
-    <li><button (click)="addCSP(0)" class="form-control">Add CSP</button></li>
-    <li><button (click)="addCSP(1)" class="form-control">Add CSP 'unsafe-inline'</button></li>
-    <li>
-      <button (click)="addCSP(2)" class="form-control" style="margin-right: 10px">Add CSP Wildcard *</button>
-      <button (click)="addScriptWildcard()" class="form-control">Add Script WildCard</button>
-    </li>
+    <ul>
+      <li><button (click)="addCSP(0)" class="form-control">Add CSP</button></li>
+      <li><button (click)="addCSP(1)" class="form-control">Add CSP 'unsafe-inline'</button></li>
+      <li>
+        <button (click)="addCSP(2)" class="form-control" style="margin-right: 10px">Add CSP Wildcard *</button>
+        <button (click)="addExternalScript()" class="form-control">Import External Script</button>
+      </li>
+    </ul>
   </div>
 
   <h3>XSS exploit:</h3>
-  <div class="row" [formGroup]="form">
-    <div class="col-md-12">
-      <label>
-        <input type="text" class="form-control" formControlName="text" placeholder="Insert text">
-      </label>
-      <button (click)="parseScript()" class="form-control">Add script</button>
-    </div>
+  <div [formGroup]="form">
+    <label>
+      <input type="text" class="form-control" formControlName="text" placeholder="Insert text">
+    </label>
+    <button (click)="parseScript()" class="form-control">Add script</button>
     <br>
   </div>
 </div>

@@ -31,7 +31,7 @@ export class CspComponent implements OnInit {
     this.renderer2.appendChild(this._document.body, this.script);
   }
 
-  addScriptWildcard() {
+  addExternalScript() {
     this.script = this.renderer2.createElement('script');
     this.script.src = 'http://localhost:3000/script/wildcard';
     this.script.text = this.form.get('text').value;
