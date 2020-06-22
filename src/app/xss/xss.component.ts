@@ -8,8 +8,6 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class XssComponent implements OnInit {
 
-  htmlSnippet = 'Template <script>alert("0wned")</script> <b>Syntax</b>';
-
   text: string = '';
   evalText: string = '';
   form: FormGroup;
