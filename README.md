@@ -1,5 +1,7 @@
 # AngularSec
 
+Ca' Foscari University Of Venice - SECURITY Course  
+
 On the root folder
 1) install `node_modules` folder with a `yarn install` command (npm required)
 2) start angular with `yarn start`
